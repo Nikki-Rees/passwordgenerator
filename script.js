@@ -78,7 +78,7 @@ function generatePassword() {
     let password = "";
     // create a loop to generate password to length specified by user
 
-    for (let i = 0; i <= pwdLength; i++) {
+    for (let i = 0; i < pwdLength; i++) {
       password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)))
     }
 
