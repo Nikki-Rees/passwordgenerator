@@ -17,11 +17,11 @@ function writePassword() {
 function generatePassword() {
   //ask used to define characters to be used within password
 
-  let pwdLength = prompt("How many characters would like your password to use? (min. 8 - max. 124)")
-  if (pwdLength > 7 && pwdLength < 125) {
-    let pwdCase = confirm("Do you want to use uppercase letters?");
-    let pwdNumbers = confirm("Do you want to include numbers within your password?");
-    let pwdSpecial = confirm("Do you want to use special chanacters within your password?");
+  let pwdLength = prompt("How many characters would like your password to contain? (min. 8 - max. 128)")
+  if (pwdLength > 7 && pwdLength < 129) {
+    let pwdCase = confirm("Would you like to include uppercase letters?");
+    let pwdNumbers = confirm("Would you like to include numbers?");
+    let pwdSpecial = confirm("Would you like to include special characters within your password?");
 
     //}else{alert("Please select a number between 8 and 124")} 
 
@@ -29,7 +29,7 @@ function generatePassword() {
     //define the arrays to be used in the password depending on the prompt output
     const charAlpha = ["abcdefghijklmnopqrstuvwxyz"];
     const alphaUp = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
-    const charNum = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const charNum = ["0123456789"];
     const charSpec = ["!@#$%^&*()_+"];
     let values = "";
 
